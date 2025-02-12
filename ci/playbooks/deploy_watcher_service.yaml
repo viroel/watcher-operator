@@ -20,7 +20,7 @@
 
     - name: Install Watcher Operator
       vars:
-        _tag: "{{ latest_dlrn_tag.content | default('current-podified') }}"
+        _tag: "{{ latest_dlrn_tag.content | default(watcher_services_tag) | default('current-podified') }}"
         # When there is no Depends-On from opendev, then content_provider_os_registry_url will return null
         # value to child job. In that case, we need to set default to quay registry.
         _registry_url: >-
