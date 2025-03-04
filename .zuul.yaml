@@ -106,7 +106,7 @@
           optimize.proxy_host_address {{ hostvars['controller']['ansible_host'] }}
           optimize.proxy_host_user zuul
           optimize.prometheus_host metric-storage-prometheus.openstack.svc
-          optimize.prometheus_ssl_enabled false
+          optimize.prometheus_ssl_enabled true
           optimize.prometheus_ssl_cert_dir /etc/prometheus/secrets/combined-ca-bundle
           optimize.podified_kubeconfig_path /home/zuul/.crc/machines/crc/kubeconfig
           optimize.podified_namespace openstack
